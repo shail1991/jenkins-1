@@ -1,8 +1,9 @@
-node {
+node{
   stage ('SCM Checkout'){
   git 'https://github.com/shail1991/jenkins-1'
 }
-  stage (Compile Package){
-  sh 'mvn package'
+  stage ('Compile Package'){
+      def mvnhome = tool name: 'maven-3', type: 'maven'
+  sh "${mvnhome}/bin/mvn package"
   }
 }
