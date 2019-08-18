@@ -1,4 +1,4 @@
-node{
+node {
   stage ('SCM Checkout'){
   git 'https://github.com/shail1991/jenkins-1'
 }
